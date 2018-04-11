@@ -16,7 +16,7 @@ module Slugifiable
         w.capitalize
       end
       name = slug_arr.join(' ')
-      result = self.find_by_name(name)
+      @result = self.find_by_name(name)
     end
 
   end
