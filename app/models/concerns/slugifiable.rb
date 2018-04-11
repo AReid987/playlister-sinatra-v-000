@@ -18,7 +18,9 @@ module Slugifiable
       #name = slug_arr.join(' ')
       #result = self.find_by_name(name)
       @result = []
-      
+      self.all.each do |s|
+        
+      end
     end
 
   end
