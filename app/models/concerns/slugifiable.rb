@@ -19,11 +19,12 @@ module Slugifiable
       #result = self.find_by_name(name)
       @result = []
       self.all.each do |s|
-        if s.slug == slug 
+        if s.slug == slug
           @result << s
         end
       end
       @result[0]
+      binding.pry 
     end
 
   end
