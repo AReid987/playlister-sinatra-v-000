@@ -24,7 +24,7 @@ module Slugifiable
         end
       end
       @result[0]
-      binding.pry 
+      #binding.pry 
     end
 
   end
