@@ -9,6 +9,7 @@ class SongsController < ApplicationController
   end
 
   get '/songs/new' do
+    binding.pry 
     erb :'songs/new'
   end
 
