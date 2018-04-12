@@ -14,12 +14,13 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    #binding.pry
+    
     if !Artist.all.include?(params[:song][:artist])
       @artist = Artist.create(name: params[:song][:artist])
       @genres = Genre.find(params[:song][:genre_ids])
       @song = Song.create(name: params[:song][:name], genres: @genres, artist: @artist)
     end
+    binding.pry
     redirect to "/songs/#{@song.slug}"
   end
 
