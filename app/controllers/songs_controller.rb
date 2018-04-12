@@ -19,7 +19,7 @@ class SongsController < ApplicationController
         @artist = artist
       end
     end
-    #if !Artist.all.include?(params[:song][:artist])
+    #if !Artist.all.include?(@artist)
     #  @artist = Artist.create(name: params[:song][:artist])
     #  @genres = Genre.find(params[:song][:genre_ids])
     #  @song = Song.create(name: params[:song][:name], genres: @genres, artist: @artist)
