@@ -18,12 +18,12 @@ class SongsController < ApplicationController
       if artist.name == params[:song][:artist]
         @artist = artist
       end
-    end   
-    if !Artist.all.include?(params[:song][:artist])
-      @artist = Artist.create(name: params[:song][:artist])
-      @genres = Genre.find(params[:song][:genre_ids])
-      @song = Song.create(name: params[:song][:name], genres: @genres, artist: @artist)
     end
+    #if !Artist.all.include?(params[:song][:artist])
+    #  @artist = Artist.create(name: params[:song][:artist])
+    #  @genres = Genre.find(params[:song][:genre_ids])
+    #  @song = Song.create(name: params[:song][:name], genres: @genres, artist: @artist)
+    #end
     binding.pry
     redirect to "/songs/#{@song.slug}"
   end
