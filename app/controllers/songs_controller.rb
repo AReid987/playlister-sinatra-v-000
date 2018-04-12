@@ -14,7 +14,6 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    binding.pry
     Artist.all.each do |artist|
       if artist.name == params[:song][:artist]
         @artist = artist
@@ -27,6 +26,8 @@ class SongsController < ApplicationController
       @genres = Genre.find(params[:song][:genre_ids])
       @song = Song.create(name: params[:song][:name], genres: @genres, artist: @artist)
     end
+    binding.pry
+
     redirect to "/songs/#{@song.slug}"
   end
 
