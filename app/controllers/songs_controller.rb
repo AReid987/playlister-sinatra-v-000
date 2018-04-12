@@ -46,7 +46,7 @@ class SongsController < ApplicationController
     @song.artist = Artist.create(name: params[:song][:artist])
     @song.save
     #binding.pry
-    erb :'/song/show'
+    erb :'/songs/show'
   end
 
 end
