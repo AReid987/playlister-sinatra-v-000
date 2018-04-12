@@ -6,10 +6,9 @@
   <label>Choose a genre:<label>
   <br></br>
   <% @genres.each do |genre| %>
-  <input type="checkbox" name="song[genre_ids][]" value="<%= genre.id %>"
+  <input type="checkbox" name="song[genre_ids][]" value="<%= genre.name %>"
   id="<%= genre.id %>"><%= genre.name %></input>
   <% end %>
-  <input type="checkbox" name="test_genre"><%= Genre.all.first.name %></input>
   <br></br>
   <input type="submit" value="Create">
 </form>
