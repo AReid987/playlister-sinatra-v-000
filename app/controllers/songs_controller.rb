@@ -16,8 +16,8 @@ class SongsController < ApplicationController
   post '/songs' do
     if !Artist.all.include?(params[:song][:artist])
       @artist = Artist.create(name: params[:song][:artist])
-    end 
-    binding.pry
+    end
+    #binding.pry
 
   end
 
