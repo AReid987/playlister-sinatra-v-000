@@ -9,6 +9,7 @@ class SongsController < ApplicationController
   end
 
   get '/songs/new' do
+    @genres = Genre.all 
     erb :'songs/new'
   end
 
