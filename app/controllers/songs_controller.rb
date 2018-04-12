@@ -14,6 +14,8 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
+    if !Artist.all.include?(params[:song][:artist])
+    end 
     binding.pry
 
   end
