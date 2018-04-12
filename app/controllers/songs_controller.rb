@@ -40,4 +40,6 @@ class SongsController < ApplicationController
     erb :'songs/edit'
   end
 
+  post '/songs/:slug'
+
 end
