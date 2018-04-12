@@ -9,7 +9,7 @@
   <input type="checkbox" name="song[genre_ids][]" value="<%= genre.id %>"
   id="<%= genre.id %>"><%= genre.name %></input>
   <% end %>
-
+  <input type="checkbox" name="test_genre"><%= Genre.all.first.name %></input>
   <br></br>
   <input type="submit" value="Create">
 </form>
