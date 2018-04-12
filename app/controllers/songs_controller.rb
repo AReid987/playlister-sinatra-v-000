@@ -41,7 +41,7 @@ class SongsController < ApplicationController
     erb :'songs/edit'
   end
 
-  post '/songs/edit' do
+  post '/songs/:slug' do
     binding.pry
 
   end
