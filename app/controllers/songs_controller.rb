@@ -43,8 +43,9 @@ class SongsController < ApplicationController
 
   post '/songs/:slug' do
     @song = Song.find_by_slug(params[:slug])
+    @song.artist = Artist.create(name: params[:song][:artist])
     binding.pry
-
+    
   end
 
 end
