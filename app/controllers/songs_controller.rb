@@ -14,7 +14,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    binding.pry
+    #binding.pry
     if !Artist.all.include?(params[:song][:artist])
       @artist = Artist.create(name: params[:song][:artist])
       @genres = Genre.find(params[:song][:genre_ids])
