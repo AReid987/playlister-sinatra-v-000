@@ -21,7 +21,7 @@ class SongsController < ApplicationController
       redirect "/songs/#{@song.slug}"
     end
 
-    #binding.pry
+    binding.pry
 
   end
 
