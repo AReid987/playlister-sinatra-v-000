@@ -14,6 +14,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
+    binding.pry
     Artist.all.each do |artist|
       if artist.name == params[:song][:artist]
         @artist = artist
