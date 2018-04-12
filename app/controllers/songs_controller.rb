@@ -41,6 +41,8 @@ class SongsController < ApplicationController
   end
 
   post '/songs/edit' do
+
+    erb :'songs/show'
   end
 
 end
