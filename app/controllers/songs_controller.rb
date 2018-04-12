@@ -45,7 +45,7 @@ class SongsController < ApplicationController
     @song = Song.find_by_slug(params[:slug])
     if !params[:song][:artist].empty?
       @song.artist = Artist.create(name: params[:song][:artist])
-    end 
+    end
     #binding.pry
     erb :'/songs/show'
   end
